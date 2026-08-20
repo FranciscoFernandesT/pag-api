@@ -1,0 +1,96 @@
+
+:root {
+  --oxide: #15150f;
+  --oxide-2: #1c1c14;
+  --hair: #000000;
+
+  --phosphor: #8fef6b;
+  --rust: #d97a2f;
+  --paper: #e9e6d8;
+  --paper-dim: #8f8c7a;
+
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --sans: ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--oxide);
+  color: var(--paper);
+  font-family: var(--sans);
+}
+
+
+.header {
+  padding: 14px 5vw;
+  border-bottom: 1px solid var(--hair);
+  font-family: var(--mono);
+}
+
+.logo span {
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--paper-dim);
+}
+
+.logo span::before {
+  content: "> ";
+  color: var(--phosphor);
+}
+
+
+.catalogo {
+  padding: 48px 5vw 72px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1px;
+  background: var(--hair);
+  border: 1px solid var(--hair);
+}
+
+.movie-grid > * {
+  background: var(--oxide);
+}
+
+.movie-grid > *:hover {
+  background: var(--oxide-2);
+}
+
+.movie-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(35%);
+}
+
+.movie-grid > *:hover img {
+  filter: grayscale(0%);
+}
+
+.movie-grid h2,
+.movie-grid h3 {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin: 10px 12px 2px;
+  color: var(--paper);
+}
+
+.movie-grid p {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--paper-dim);
+  margin: 0 12px 10px;
+}
+.busca button{
+  font-size: 0.1rem;
+}
